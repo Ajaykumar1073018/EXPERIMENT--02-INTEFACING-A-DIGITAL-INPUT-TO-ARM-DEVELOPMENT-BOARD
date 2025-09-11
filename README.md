@@ -146,13 +146,8 @@ void Error_Handler(void)
 ```
 
 ## Output  :
-
-### Off position:
-![IMG_20250909_091409](https://github.com/user-attachments/assets/7659c033-d96e-4bb4-a5c2-6d26c4c26d4a)
-
-### On position:
-
-![IMG_20250909_091459](https://github.com/user-attachments/assets/8d1e4a58-da5b-4d8a-92ac-a327e0df8864)
+![WhatsApp Image 2025-09-10 at 08 41 00_812fdff3](https://github.com/user-attachments/assets/db83585e-f9f8-49ea-ae21-9143d9390f78)
+![WhatsApp Image 2025-09-10 at 08 41 23_d357abd3](https://github.com/user-attachments/assets/4e1ebc97-55b7-420e-965b-03f1d63d103a)
 
 ## layout of the circuit 
  
