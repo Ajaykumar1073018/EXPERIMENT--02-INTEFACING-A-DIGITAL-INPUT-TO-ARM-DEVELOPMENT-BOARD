@@ -146,9 +146,13 @@ void Error_Handler(void)
 ```
 
 ## Output  :
- ![PMC Ex2(1)](https://github.com/user-attachments/assets/9699daae-2af9-403b-98e6-863cbc8df77d)
 
- ![PMC Ex2(2)](https://github.com/user-attachments/assets/a4b1e010-126c-42e0-b4f4-113a212718bd)
+### Off position:
+![IMG_20250909_091409](https://github.com/user-attachments/assets/7659c033-d96e-4bb4-a5c2-6d26c4c26d4a)
+
+### On position:
+
+![IMG_20250909_091459](https://github.com/user-attachments/assets/8d1e4a58-da5b-4d8a-92ac-a327e0df8864)
 
 ## layout of the circuit 
  
