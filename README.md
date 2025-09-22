@@ -1,4 +1,6 @@
-# EXPERIMENT--02-INTEFACING-A-DIGITAL-INPUT-TO-ARM-DEVELOPMENT-BOARD
+# EXPERIMENT 02 :  INTEFACING A DIGITAL INPUT TO ARM DEVELOPMENT BOARD
+# NAME : IRFAN KHAN.N
+# REGISTER NO : 212224230097
 ## Aim: 
 To Interface a Digital Input  (userpush button  ) to ARM   development board and write a  program to obtain  the data and flash the led  
 ## Components required:
@@ -71,17 +73,15 @@ int main(void)
   while (1)
   {
     button_status = HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13);
-
-    if (button_status == GPIO_PIN_RESET)
-    {
+    if (button_status == 0) {
       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
       HAL_Delay(1000);
       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
       HAL_Delay(1000);
     }
-    else
-    {
+    else {
       HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
+      HAL_Delay(1000);
     }
   }
 }
@@ -92,7 +92,6 @@ void SystemClock_Config(void)
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
   HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1);
-
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSIDiv = RCC_HSI_DIV1;
@@ -102,7 +101,6 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
@@ -143,15 +141,28 @@ void Error_Handler(void)
   {
   }
 }
+
+#ifdef  USE_FULL_ASSERT
+void assert_failed(uint8_t *file, uint32_t line)
+{
+}
+#endif
 ```
 
+
 ## Output  :
-![WhatsApp Image 2025-09-10 at 08 41 00_812fdff3](https://github.com/user-attachments/assets/db83585e-f9f8-49ea-ae21-9143d9390f78)
-![WhatsApp Image 2025-09-10 at 08 41 23_d357abd3](https://github.com/user-attachments/assets/4e1ebc97-55b7-420e-965b-03f1d63d103a)
 
-## layout of the circuit 
+![WhatsApp Image 2025-09-18 at 14 51 13_be8d6114](https://github.com/user-attachments/assets/037f1445-4928-4d10-9ca8-282229913e18)
+
+
+![WhatsApp Image 2025-09-18 at 14 51 14_9b171394](https://github.com/user-attachments/assets/d3a1c89c-a412-4d93-8330-2a6bc3f5c83c)
+
+
  
- <img width="847" height="780" alt="PMC" src="https://github.com/user-attachments/assets/85f13780-efd5-4627-8684-a28ccdc662be" />
+## layout of the circuit :
 
+<img width="667" height="848" alt="image" src="https://github.com/user-attachments/assets/12a90e79-6a4e-471a-97ee-0a4a7798a0ca" />
+ 
+ 
 ## Result :
 Interfacing a digital Input (Pushbutton ) with ARM microcontroller based IOT development is executed and the results are verified.
